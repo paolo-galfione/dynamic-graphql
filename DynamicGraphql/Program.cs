@@ -48,10 +48,12 @@ namespace HelloWord
             ObjectType mutation = new ObjectType(c =>
             {
                 c.Name("Mutation");
-/*  ERROR          c.Field<JsonQL>(r => r.Upsert(default))
+/* ERROR
+                c.Field<JsonResolvers>(r => r.Upsert(default))
                     .Type(survey)
                     .Argument("survey", d => d.Type(surveyInput))
-                    .Name("upsertSurvey"); */
+                    .Name("upsertSurvey"); 
+*/
             });
 
             ISchema schema = SchemaBuilder.New()
